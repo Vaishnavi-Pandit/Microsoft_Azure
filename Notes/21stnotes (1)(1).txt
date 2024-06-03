@@ -1,0 +1,117 @@
+ADF --> activities
+
+DataFactory --> 
+
+ingestion
+processing
+monitoring
+scheduling
+
+ADF -->  ETL  ---->  Extract   Transfom   Load 
+                     Dataflows 
+					 
+         ELT   ---> copyactivity --> notebookactivity 
+		                              (Databricks)
+		 EL  ----> copyactivity 
+---------------------------
+
+sql ---> 
+          selelect 
+		  derive new columns 
+		  unions
+		  joins
+		  windowfunctions
+		  aggregations
+		             ----> table 
+					 
+					 
+
+   Dataflows --> 
+   
+          source         Tranformations              sink 
+		  
+		  Dataset 
+		  
+		  file
+		  table
+		  
+		  select 
+		  gender, 
+		  sum(Salary)
+		  from emp 
+		  group by gender 
+		  
+---------------
+
+sql table: emp_info 
+
+columns: 
+
+empid	firstname	lastname	age	salary	gender	deptno	state	mobilenumber	mail
+
+
+
+select 
+gender, 
+sum(salary)
+from emp_info 
+group by gender 
+
+
+
+
+select * from emp_info where deptno = 10 
+
+
+
+which department is having totalsalary > 10000
+
+
+select 
+deptno, 
+sum(salary) as totalsalary
+from emp_info 
+group by deptno 
+having sum(salary) > 10000
+
+
+select * from emp_info order by salary desc 
+
+
+
+empinfo   --> 
+empid	firstname	lastname	age	salary	gender	deptno	state	mobilenumber	mail
+
+deptinfo  --> 
+deptno deptname 
+
+
+select
+e.*, 
+d.deptname 
+from empinfo e 
+inner join deptinfo d 
+on e.deptno = d.deptno 
+
+-------------------
+
+select 
+derive column 
+aggregate 
+filter 
+sort 
+joins 
+
+-------------------
+
+union 
+exist
+conditianal split 
+--------------------------
+
+
+
+
+
+
+ 

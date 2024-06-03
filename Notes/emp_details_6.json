@@ -1,0 +1,14 @@
+[
+{
+"id":"101",
+"name":"srinivas",
+"gender":"male",
+"languages":["English","Hindi"]
+},
+{
+"id":"102",
+"name":"phani",
+"gender":"male",
+"languages":["English","Hindi"]
+}
+]

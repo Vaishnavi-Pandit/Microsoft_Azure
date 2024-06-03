@@ -1,0 +1,143 @@
+ADF --> activities
+
+set variable activity 
+copy activity 
+foreach activity 
+
+------------
+
+lst = ['orders.txt','sales.txt']
+
+for --> @item
+
+metadata
+
+
+
+{
+	"childItems": [
+		{
+			"name": "accounts.txt",
+			"type": "File"
+		},
+		{
+			"name": "orders.txt",
+			"type": "File"
+		},
+		{
+			"name": "reviews.txt",
+			"type": "File"
+		},
+		{
+			"name": "sales.txt",
+			"type": "File"
+		}
+	],
+	"effectiveIntegrationRuntime": "AutoResolveIntegrationRuntime (East US)",
+	"executionDuration": 0,
+	"durationInQueue": {
+		"integrationRuntimeQueue": 0
+	},
+	"billingReference": {
+		"activityType": "PipelineActivity",
+		"billableDuration": [
+			{
+				"meterType": "AzureIR",
+				"duration": 0.016666666666666666,
+				"unit": "Hours"
+			}
+		]
+	}
+}
+
+
+select * from employee where deptno = 10 
+
+
+
+{
+	"childItems": [
+		{
+			"name": "orders_14042024.txt",
+			"type": "File"
+		},
+		{
+			"name": "orders_15042024.txt",
+			"type": "File"
+		},
+		{
+			"name": "orders_16042024.txt",
+			"type": "File"
+		},
+		{
+			"name": "orders_17042024.txt",
+			"type": "File"
+		},
+		{
+			"name": "sales_15042024 .txt",
+			"type": "File"
+		},
+		{
+			"name": "sales_16042024.txt",
+			"type": "File"
+		},
+		{
+			"name": "sales_17042024.txt",
+			"type": "File"
+		}
+	],
+	"effectiveIntegrationRuntime": "AutoResolveIntegrationRuntime (East US)",
+	"executionDuration": 0,
+	"durationInQueue": {
+		"integrationRuntimeQueue": 0
+	},
+	"billingReference": {
+		"activityType": "PipelineActivity",
+		"billableDuration": [
+			{
+				"meterType": "AzureIR",
+				"duration": 0.016666666666666666,
+				"unit": "Hours"
+			}
+		]
+	}
+}
+
+---------------
+
+
+cntry_nm = input("Enter country Name\n")
+
+if cntry_nm == 'India':
+	print("currency is rupee")
+elif cntry_nm == 'US':
+	print("currency is dollar")
+elif cntry_nm == 'UK':
+	print("currency is pound")
+else:
+	print("invalid country name")
+------------------------	
+	
+cntry_nm = input("Enter country Name\n")
+	
+swith cntry_nm
+
+case 'India'
+{
+     print("curreny is rupee") 
+}	 
+case 'US' 
+{
+
+{
+case 'UK'
+{
+
+}
+default
+{
+
+}
+
+	
+	

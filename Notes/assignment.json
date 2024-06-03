@@ -1,0 +1,39 @@
+[
+{
+"id":"101",
+"name":"srinivas",
+"gender":"male",
+"languages":["English","Hindi"],
+"qualifcation":["BTech","MTech"],
+"address":{
+	        "permanentadress": {
+								"city":"Hyderabad",
+								"country":"india"
+			                   },
+			"currentaddress": {
+								"city":"Guntur",
+								"country":"india"
+			                   }
+			
+          } 
+},
+{
+"id":"102",
+"name":"phani",
+"gender":"male",
+"languages":["English","Hindi"],
+"qualifcation":["BTech","MTech"],
+"address":{
+	        "permanentadress": {
+								"city":"Hyderabad",
+								"country":"india"
+			                   },
+			"currentaddress": {
+								"city":"Guntur",
+								"country":"india"
+			                   }
+			
+          }
+}
+]
+

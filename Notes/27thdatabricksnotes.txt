@@ -1,0 +1,84 @@
+Azure DataFactory 
+
+Azure Databricks
+-----------------
+
+BigData --> challenges --> Hadoop
+
+1. How to store the data  ---> HDFS
+2. How to process the data ---> MR,Spark 
+
+
+Database --> RDBMS --> oracle, sqlserver, mysql, teradata...
+
+
+Hadoop , --> Databricks 
+HDFS           DBFS
+MR/Spark       Spark 
+
+
+
+srinivastraining05@gmail.com
+Avd@1234
+
+------------------------
+
+1) 
+
+inbound/                        outbound/
+       reviews.txt
+	   sales.txt 
+	   accounts.txt 
+	   products.txt 
+	   
+	   
+copy all the files from inbound folder to outbound folder 
+
+i) cp -> recursive
+ii) for loop --> copy file by file 
+
+2) 
+
+inbound/                        outbound/
+       reviews_25042024.txt
+	   reviews_26042024.txt
+	   reviews_27042024.txt                reviews_27042024.txt
+	   
+	 copy only today date file 
+	 
+3) 
+
+
+inbound/                        outbound/
+       reviews.csv                        reviews.csv
+	   sales.csv                          sales.csv
+	   accounts.txt 
+	   products.txt 
+	   
+copy only csv files 
+
+4)
+
+inbound/                        outbound/
+       reviews_25042024.txt
+	   reviews_26042024.txt
+	   reviews_27042024.txt                reviews_27042024.txt
+	   products_25042024.txt               products_27042024.txt
+       products_26042024.txt
+       products_27042024.txt
+	   
+5) 
+
+inbound/                        outbound/
+       reviews_23042024.txt
+       reviews_24042024.txt
+       reviews_25042024.txt
+	   reviews_26042024.txt
+	   reviews_27042024.txt
+	   
+last 3 days --> 27,26,25 
+
+
+
+maths --> calculators ---> 
+chatgpt, ai tools --> basics -->

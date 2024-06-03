@@ -1,0 +1,28 @@
+[
+{
+"id":"101",
+"name":"srinivas",
+"gender":"male",
+"address":{
+            "city":"Hyderabad",
+			"country":"india",
+			"house_dtls":{
+			                "doorno":"1-2-3",
+							"street":"srnagar"
+			             }
+          } 
+},
+{
+"id":"102",
+"name":"phani",
+"gender":"male",
+"address":{
+            "city":"Hyderabad",
+			"country":"india",
+			"house_dtls":{
+			                "doorno":"1-2-3",
+							"street":"ameerpet"
+			             }
+          }
+}
+]

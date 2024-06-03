@@ -1,0 +1,84 @@
+3 files ---> 3 tables
+
+
+
+orders.csv      orders_tbl
+sales.csv       sales_tbl
+customers.csv   cust_tbl
+
+
+azursql 
+-------
+control_tbl ===> 2 columsn 
+
+filename, tablename 
+
+create table control_tbl(filename varchar(20), tablename varchar(20));
+
+insert into control_tbl values('orders.csv','orders_tbl');
+insert into control_tbl values('sales.csv','sales_tbl');
+insert into control_tbl values('customers.csv','cust_tbl');
+
+orders.csv
+----------
+order_id,cust_id
+O1,C1
+O2,C2
+O3,C3
+	
+create table orders_tbl(order_id varchar(20),cust_id varchar(20))
+	
+sales.csv 
+-----------
+sales_id,cust_id
+S1,C2
+S2,C3
+S3,C1
+
+create table sales_tbl(sales_id varchar(20),cust_id varchar(20));
+	
+
+
+customers.csv 
+---------------
+
+cust_id,cust_name
+C1,srinivas
+C2,phani
+C3,krishna
+
+create table cust_tbl(cust_id varchar(20),cust_name varchar(20));
+
+
+lookupactivity --> limitation --> 4MB or 5000 rows 
+
+---------------------------------------------------
+
+
+untilactivity
+
+
+while loop, do ... while loop 
+
+1 to 10 numbers 
+
+i=0
+while (i<10)
+{
+print(i)
+i = i+1
+}
+
+i=0
+do
+{
+print(i)
+i = i+1
+}while(i<10)
+
+
+
+
+
+
+

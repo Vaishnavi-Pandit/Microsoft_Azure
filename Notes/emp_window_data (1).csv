@@ -1,0 +1,22 @@
+empid,empname,gender,deptno,sal
+121,rajendra,M,10,50000
+111,Krishna,M,10,40000
+101,Prasad,M,10,25000
+106,viswas,M,10,25000
+116,kishore,M,10,25000
+107,akhila,F,20,45000
+102,Rahul,M,20,30000
+117,Sravani,F,20,30000
+112,ahmad,M,20,20000
+103,aditya,M,30,40000
+118,siva krishna,M,30,40000
+108,prajol,M,30,35000
+113,Anusha,F,30,30000
+109,venu,M,40,40000
+114,prasanth,M,40,40000
+104,Pavani,F,40,20000
+119,satish,M,40,20000
+105,anupama,F,50,35000
+120,Sunitha,F,50,25000
+110,Sujatha,F,50,20000
+115,aravind,M,50,20000

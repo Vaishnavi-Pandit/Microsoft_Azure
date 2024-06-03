@@ -1,0 +1,38 @@
+ADF --> 
+
+set variable activity 
+copy activity 
+foreach activity 
+getmetadatactivity 
+if condition 
+swith activity 
+
+----------------
+
+connecting to azuresqlserver 
+lookupactivity 
+
+----------------------------
+
+RDBMS --> oracle, sqlserver, teradata,db2...
+
+
+srinivas
+avd@1234
+
+devsqlserveravd.database.windows.net
+
+
+---> srinivas 
+
+rg_avd
+   stgactname
+   datafactoryname
+   sqlserver --> servername 
+              ---> datbase name 
+			  
+linux ---> 
+   script to connect to database 
+    password --->  
+
+ sqlpwd.txt ---> r --> 	

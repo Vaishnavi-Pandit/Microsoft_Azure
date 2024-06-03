@@ -1,0 +1,102 @@
+ADF --> 
+
+setvariable activity 
+
+Copy activity 
+src         sink 
+dataset     dataset 
+LS            LS 
+
+Dataset --> with parameters 
+Datefunction--> utcnow()
+                formatDateTime()
+				
+--------------------------------------
+
+
+dt  ----> @utcnow()
+
+prvs_Dt  ---> @adddays(variables('dt'),-1)
+
+fileDate ----> @formatDateTime(variables('prvs_Dt'),'ddMMyyyy')
+
+srcFileName ---> @concat('orders_',variables('fileDate'),'.txt')
+
+
+
+===================
+
+
+dt  ----> @utcnow()
+
+prvs_Dt  ---> @adddays(variables('dt'),-1)
+
+fileDate ----> @formatDateTime(variables('prvs_Dt'),'ddMMyyyy')
+
+srcFileName ---> @concat('orders_',formatDateTime(adddays(utcnow(),-1),'ddMMyyyy'),'.txt')
+
+
+-----------------------------------
+
+
+srcfiles/ 
+         file1.txt 
+		 file2.txt 
+		 file11.txt 
+		 file22.txt 
+		 file111.txt 
+		 file222.txt 
+		 
+		 
+		 file??.txt 
+		     0 ---> 
+			 1 ----> 
+			 2 ---> 
+		 
+		 file*.txt 
+		 
+		 @concat('*',variable(dt),'*')
+		 
+		 
+
+		 
+		 
+		 
+		 
+		 
+		 
+wildcardpath ---> pattern 
+
+
+   srcfiles/ 
+             file?.txt 
+			 file.txt 
+			 file1.txt 
+			 file2.txt 
+			 
+			 
+			 ?  ----> 0 character, 1 character 
+			 
+			 
+----------------
+
+inbound/ 
+        orders.txt 
+		sales.txt 
+		products.txt 
+		accounts.txt 
+		filenameslst.txt 
+		
+		
+		
+		
+		
+		
+filenameslst.txt 
+sales.txt 
+products.txt 
+
+
+
+
+

@@ -1,0 +1,78 @@
+
+Dataflows
+-----------
+
+select
+derive column 
+aggregate
+filter
+rank
+window
+union
+lookup
+exists
+newbranch
+conditionalsplit
+---------------------
+flatten tranformation 
+parse transformation 
+flowlet
+alterrow 
+
+       insert 
+	   update
+	   delete
+	   upsert 
+	   
+
+-----------
+
+json files ---> 
+
+
+----------------------
+
+empid ==> empid, empname
+           1,aa 
+		   1,aa 
+		   2,bb 
+		   2,bb 
+		   2,bb 
+		   
+		   
+		   select distinct empid,empname from emp 
+		   
+		   select empid, empname 
+		   from 
+		   (
+		   select 
+		   empid, empname ,count()
+		   from emp 
+		   group by empid, empname
+           )
+    1,aa
+    2,bb 
+	
+	
+	--------------
+	
+	flowlet(dataset)
+	    aggregate 
+		select 
+		
+	flowlet(emp)
+	flowlet(dept)
+	
+	def getuniqrec(file):
+       f = open(file','r')
+	   lines = f.realines()
+	   res  = list(set(lines))
+	   return res 
+	   
+	 getuniqrec(emp.csv)
+     getuniqrec(dept.csv)
+
+	 
+	   
+	
+	

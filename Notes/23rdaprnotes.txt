@@ -1,0 +1,124 @@
+ADF---> 
+
+Dataflows --> 
+
+  select 
+  derive column 
+  filter
+  aggregate
+  join
+  union
+  lookup
+  exists
+  window
+  rank 
+  newbranch
+  flowlet
+  flatten
+  parse
+  
+  -------------------
+  
+ surrogatekey 
+ pivot
+ unpivot
+ assert
+ alterrow 
+ ---------------
+ 
+ surrogatekey ---> using generate the primary key 
+ 
+ 
+ 
+ primarykey   --> not null and unique 
+ unique     ---> unique and allow one null value 
+ foreign key  ---> pointing primary key of the another table 
+ 
+ compositprimary key -->  mutiple columns together 
+ 
+ 
+ pivot --> conver rows to columns 
+ 
+ 
+ deptno	gender	totalsalary
+10	M	5000
+10	F	4000
+20	F	4000
+20	M	5000
+30	M	4000
+30	F	8000
+40	M	3000
+40	F	3000
+50	M	7000
+
+
+select 
+deptno , 
+sum(case when gender = 'M' then totalsalary else 0 end ) as M , 
+sum(case when gender = 'F' then totalsalary else 0 end ) as F
+from emp 
+group by deptno 
+ 
+ 
+ 
+ expecting -> True
+  uniqueness
+  exist 
+  
+  ----------> 
+                                      
+  11091995 ---> ddmmyyy ---> 11091995  ---> isnull(11091995) --> false ---> !(false)
+  
+  2018abc23 ---> ddmmyyyy ---> null   ----> isnull(null) -----> true ----> !(true)
+ 
+ 
+ alterrow 
+ --------
+ 
+ insert 
+ update
+ delete 
+ upsert 
+ 
+             src                    sink 
+			 files                  table 
+			 
+			 
+ 
+ 
+alter row transformation
+-------------------------
+
+           files ------------tables
+
+
+create table cust_dts 
+(
+   cust_id varchar(20), 
+   cust_name varchar(20), 
+   country varchar(20)
+);
+
+		   
+cust_id	cust_name	country
+insert into cust_dts values('C1','Rahul','UK');
+insert into cust_dts values('C2','Ravi','UK');
+insert into cust_dts values('C3','Krishna','US');
+insert into cust_dts values('C4','Manoj','INDIA');
+	   
+	--------------
+	
+	webactivity 
+	how send mail notifications --> logicapps
+	adf --> repos -->  
+projects senario	
+	         
+		------> 
+		
+	adf --> project implementaitno
+	
+	
+	
+	
+		   
+		   

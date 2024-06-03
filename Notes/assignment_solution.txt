@@ -1,0 +1,16 @@
+
+df1 = spark.read.format("json").option('multiline',True).load("dbfs:/FileStore/shared_uploads/pvrcloudtech@gmail.com/Databricks_Feb2024/inbound/assignment.json")
+
+from pyspark.sql.functions import col, expr, column
+
+# First use explode on 'languages' column and save dataframe to df2
+
+df2 = df1.select('id','name','gender',col('address.permanentadress.city').alias('perm_city'),col('address.permanentadress.country').alias('perm_country'),col('address.currentaddress.city').alias('curr_city'),col('address.currentaddress.country').alias('curr_country'),explode('languages').alias('lang'),'qualifcation')
+
+df2.show()
+
+# Second use explode on 'qualification' column and save dataframe to df3
+
+df3 = df2.select('id','name','gender','perm_city','perm_country','curr_city','curr_country','lang',explode('qualifcation').alias('qual'))
+
+df3.show()

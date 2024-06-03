@@ -1,0 +1,3 @@
+order_id,cust_id,order_date
+O1,C1,13042024
+O2,C2,13042024

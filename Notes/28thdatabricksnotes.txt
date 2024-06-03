@@ -1,0 +1,138 @@
+Azure DataFactory 
+
+Azure Databricks
+-----------------
+
+BigData --> challenges --> Hadoop
+
+1. How to store the data  ---> HDFS
+2. How to process the data ---> MR,Spark 
+
+
+Database --> RDBMS --> oracle, sqlserver, mysql, teradata...
+
+
+Hadoop , --> Databricks 
+HDFS           DBFS
+MR/Spark       Spark 
+
+
+
+srinivastraining05@gmail.com
+Avd@1234
+
+------------------------
+
+1) 
+
+inbound/                        outbound/
+       reviews.txt
+	   sales.txt 
+	   accounts.txt 
+	   products.txt 
+	   
+	   
+copy all the files from inbound folder to outbound folder 
+
+i) cp -> recursive
+ii) for loop --> copy file by file 
+
+2) 
+
+inbound/                        outbound/
+       reviews_25042024.txt
+	   reviews_26042024.txt
+	   reviews_27042024.txt                reviews_28042024.txt
+	   reviews_28042024.txt
+	   
+	 copy only today date file 
+	 
+3) 
+
+
+inbound/                        outbound/
+       reviews.csv                        reviews.csv
+	   sales.csv                          sales.csv
+	   accounts.txt 
+	   products.txt 
+	   
+copy only csv files 
+
+4)
+
+srcfiles/                        outbound/
+       reviews_25042024.txt
+	   reviews_26042024.txt
+	   reviews_27042024.txt 
+	   reviews_28042024.txt                 reviews_28042024.txt     
+	   orders_25042024.txt                  orders_28042024.txt
+       orders_26042024.txt
+       orders_27042024.txt
+	   orders_28042024.txt
+	   
+5) 
+
+inbound/                        outbound/
+       reviews_23042024.txt
+       reviews_24042024.txt
+       reviews_25042024.txt
+	   reviews_26042024.txt        reviews_26042024.txt
+	   reviews_27042024.txt        reviews_27042024.txt
+	   reviews_28042024.txt        reviews_28042024.txt
+	   orders_23042024.txt         orders_26042024.txt
+	   orders_24042024.txt		   orders_27042024.txt
+	   orders_25042024.txt		   orders_28042024.txt
+	   orders_26042024.txt
+	   orders_27042024.txt
+	   orders_28042024.txt
+	   
+last 3 days --> 28,27,26
+
+       i) get last 3 days dates --> dates_lst ==> ['28042024','27042024','26042024']
+	   
+      ii) get all the list of files from inbound folder 
+	  
+	  iii) take each and every file --> get filedate from the filename 
+	  
+	  iv) check if the file date is in dates_lst ---> 
+	                           then do copy 
+							   
+	  
+
+
+
+maths --> calculators ---> 
+chatgpt, ai tools --> basics -->
+
+
+
+-------------------------
+
+
+
+BigData challenges : 
+
+1) storage  ---> HDFS , DBFS , ADLS 
+2) processing ---> MapReduce , spark 
+
+
+Hadoop --> HDFS ---> MR/Spark 
+Databricks --> DBFS ---> spark 
+
+----------------------------
+
+HDFS  ---> File --> blocks --> distributed cluster 
+
+
+elections --> 
+voting cast
+R 
+G
+B 
+
+spark --> RDD -->Transformations, actions
+
+python ==>  list , dictionary , for loop , lambda functions 
+                                            lambda with map 
+											lambda with filter 
+											

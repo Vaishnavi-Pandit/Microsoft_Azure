@@ -1,0 +1,112 @@
+
+Lookupactivity 
+vs
+getMetadata activity 
+
+accounts.csv   ----> 1stapril --> 20KB
+1,aa 
+2,bb 
+
+---> filesystem --> lookupactivty --> content of the file 
+                   getMetadata ----> information of file 
+				   
+---> Database --> lookupactivty --> records from the table 
+                  getMetadata ---> information of the table 
+				  
+		--------------
+		
+append variable activity 
+------------------------
+
+[
+      {"person_id":101, "person_name":"srinivas"},
+      {"person_id":102, "person_name":"phani"}
+     ]
+
+fail activity 
+--------------
+
+      inbound/orders.txt 
+	  
+	   
+execute pipeline activity 
+------------------------
+
+parameters --> 
+
+
+
+def add(a,b):
+    c = a+b 
+	print("sum is ",c) 
+	
+add(10,20)
+add(30,40)
+
+
+-----------------------
+
+pipeline ---> parameters 
+          
+		
+------------------------
+
+  Triggers
+------------
+ scheduling purpose 
+ 
+ 
+ ----------------------------
+ 
+1. scheduling trigger
+2. storage event trigger 
+3. tumbling window trigger 
+
+------------------------------
+
+
+scheduling trigger : 
+                   
+				   activationtime
+				   
+				   frequencey ---> 
+				   
+				   
+order_20042024.csv
+
+--------------------------
+
+pipeline:
+           copyactivity 
+
+tumbling window trigger 
+
+
+   startTime : 1stapril 2024  10AM 
+   endTime   : 4thapril 2024  10AM 
+   windowsize : 24 hours 
+
+  w1 :    1stapril ---> 2ndapril 
+  w2 :    2ndapril  --> 3rdapril           pipeline
+  w3 :    3rdapril  --> 4thapril 
+  
+  
+  
+
+
+
+
+
+				   
+				   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+  

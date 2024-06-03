@@ -1,0 +1,233 @@
+
+What is Data?
+
+Database
+ETL 
+Cloud computing
+
+-----------------------
+
+1. Azure storage accounts ---> ADLS --> Azure datalake storage 
+
+
+
+Agenda:
+------
+1. Database vs Datawarehouse  vs Datalake   vs Datalakehouse 
+
+2. How to create a azure free trail
+
+3. subscription vs resource group
+
+4. How to create azure storage account 
+
+5. How to use azure storage account
+
+-------------------------------
+
+Database  vs Datawarehouse vs Datalake vs datalake lakehouse 
+
+
+-------------------
+
+azure storage accounts 
+
+1) blob storage : blobs ---> binary large object 
+
+             ------->  containers
+			               --------> files 
+						   
+			   i) blobstorage ------>  flat namespace 
+			   ii) ADLS -----> Azure datalake storage ---> hiearchial namespace 
+			        ---> http,https                      
+						   
+2) file shares--->    NFS, smb protocols
+                 
+				   cloud --> file system 
+				   mount --> 
+
+3) tables ------>  nosql related 
+                     keyvaule based 
+
+4) Queues  ----> messaging system ---> 
+
+
+-------------------------------------------------
+
+How to create azure account 
+--------------------
+
+cloud provider --> pay as you go model 
+
+azure  ---> free trail ---> 200$ --> 
+
+    storage account --> 1TB --> 20$
+	datafactory -----> 4$
+	
+-----------------
+
+portal.azure.com --> 
+
+one azure account ---> mutiple can use 
+
+---------------
+
+
+production
+devsubscriptio
+testsubscriptio
+
+--------------------
+
+Azure DataFactory 
+
+--> Cloud ETL 
+          ELT
+		        extract load  transform
+		  EL 
+	--> ingestion 
+	---> processing 
+	---> scheduling 
+	--> monitoring
+
+
+visa/master        icici
+
+
+components of datafactory 
+------------------------
+
+
+1. Pipelines   -----> set of activities 
+
+2. activities  -----> each activity is having own task 
+
+3. Linked services  ---> establishes connection
+
+4. Datasets  ------> location or type of the data 
+
+5. Ingetegration runtime ---> provides compting environment, networking enivornment
+
+6. Triggers  ------> scheduling 
+
+-----------------------------------------
+
+
+
+1. How to create azure datafactory service 
+
+2. How to create a pipeline
+
+3. How to use set variable activity 
+
+4. How to debug the pipline 
+
+-------------------------
+
+python: 
+variables 
+datatypes 
+ifcondition 
+for loops 
+functions 
+programs 
+=============
+
+ADF --> variables 
+
+
+python: 
+------
+
+prsn_name = 'srinivas'
+
+print("person name is ",prsn_name)
+
+output 
+-----
+person name is srinivas 
+
+
+ADF --> 
+
+
+prsn_name = 'srinivas'
+
+msg =>  "person name is ",prsn_name
+
+------------------
+
+python:
+------
+
+prsn_name = 'srinivas'
+prsn_loc  = 'Hyderabad'
+
+print("person name is ", prsn_name," and location is ", prsn_loc)
+
+
+
+
+
+
+
+prsn_name = 'srinivas'
+prsn_loc  = 'Hyderabad'
+
+msg --- person name is srinivas and location is Hyderabad
+
+
+
+@concat(
+       'person name is ',
+	   variables('prsn_name'),
+	   ' and location is ',
+	   variables('prsn_loc')
+	   )
+
+Assignment
+------------
+1)
+
+acct_name = 'srinivas'
+acct_number = 33521
+bank_name = 'HDFC'
+
+
+output ---> 
+
+account numebr is 33521 , name is srinivas and bank is HDFC 
+
+
+-----------------
+
+prsn_name = 'srinivas' 
+location = 'Hyderabad'
+
+person name is srinivas , location is hyderabad 
+
+
+srinivas@pythoncoding.in 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

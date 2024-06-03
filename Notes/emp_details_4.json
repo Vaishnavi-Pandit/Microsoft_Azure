@@ -1,0 +1,20 @@
+[
+{
+"id":"101",
+"name":"srinivas",
+"gender":"male",
+"address":{
+            "city":"Hyderabad",
+			"country":"india"
+          } 
+},
+{
+"id":"102",
+"name":"phani",
+"gender":"male",
+"address":{
+            "city":"Hyderabad",
+			"country":"india"
+          }
+}
+]

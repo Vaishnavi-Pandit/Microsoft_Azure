@@ -1,0 +1,14 @@
+[
+{
+"id":"101",
+"name":"srinivas",
+"gender":"male",
+"phonenumber":9999
+},
+{
+"id":"102",
+"name":"phani",
+"gender":"male",
+"location":"Hyderabad"
+}
+]

@@ -1,0 +1,3 @@
+revw_id,revw_txt,prod_id
+R1,product is good, P1
+R2,nice product,P2

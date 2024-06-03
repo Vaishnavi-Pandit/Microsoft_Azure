@@ -1,0 +1,96 @@
+
+1. create resource group and launch azure services
+
+    i) ADLS  ii) ADF  iii) Keyvault   iv) azure server(sqldatabase)
+	
+2. Prepare the source data 
+
+
+Create table reviews
+(
+review_id varchar(10),
+review_text varchar(1000),
+prod_id varchar(10),
+created_dt varchar(20),
+Ishelpful varchar(10)
+)
+
+
+insert into reviews values('REVW001','product is not good','PROD001','2024-04-20','yes');
+insert into reviews values('REVW002','Nice product','PROD002','2024-04-20','yes');
+insert into reviews values('REVW003','worthable product','PROD003','2024-04-20','no');
+insert into reviews values('REVW004','use less product','PROD004','2024-04-20','no');
+insert into reviews values('REVW005','product is not good','PROD005','2024-04-20','yes');
+insert into reviews values('REVW006','Nice product','PROD001','2024-04-20','yes');
+
+insert into reviews values('REVW007','worthable product','PROD002','2024-04-21','no');
+insert into reviews values('REVW008','use less product','PROD003','2024-04-21','no');
+insert into reviews values('REVW009','product is not good','PROD004','2024-04-21','yes');
+insert into reviews values('REVW010','Nice product','PROD005','2024-04-21','yes');
+insert into reviews values('REVW011','worthable product','PROD001','2024-04-21','no');
+
+insert into reviews values('REVW012','use less product','PROD002','2024-04-22','yes');
+insert into reviews values('REVW013','product is not good','PROD003','2024-04-22','yes');
+insert into reviews values('REVW014','Nice product','PROD004','2024-04-22','yes');
+insert into reviews values('REVW015','product is not good','PROD001','2024-04-22','yes');
+insert into reviews values('REVW016','Nice product','PROD002','2024-04-22','no');
+insert into reviews values('REVW017','worthable product','PROD003','2024-04-22','no');
+
+
+3. prepare a control table in Azure sql 
+
+
+create table cntrl_tbl
+(
+	table_name varchar(20)
+	,source_name varchar(20)
+	,table_type varchar(20)
+	,incremental_col varchar(100)
+	,ingestion_dt varchar(20)
+)
+
+
+insert into dbo.cntrl_tbl
+values('reviews','BazaarVoice','Incremental_append','created_dt','2024-04-20');
+
+insert into dbo.cntrl_tbl values('products','BazaarVoice','incremental_merge','lastmodified_dt','2024-04-20'
+);
+insert into dbo.cntrl_tbl values('categories','BazaarVoice','fullsync','','2024-04-20');
+
+4)
+   Create ADF pipline 
+   
+5)  Using lookupactivity connect to Azure sql and get control table information 
+
+6) lookupactivity output is an array which input foreach activity 
+
+6) Inside foreach create set variables for tablename, incremental column and ingestion date. 
+
+7) using theses variable prepare query for copy activity 
+
+8) using copyactivity connect to source(sqlserver) get data to ADLS as json format
+
+9) using notebook activity process thedata
+
+10) using stored procedure activity update the data in control table for next run.
+
+
+
+
+create procedure updateingestiondt
+@ingestiondt varchar(20),
+@tablename varchar(20)
+AS
+BEGIN
+
+update dbo.cntrl_tbl set  ingestion_dt=convert(VARCHAR(10),DATEADD(day, 1, convert(date, @ingestiondt))) where table_name =@tablename 
+
+END
+
+
+
+Assignment
+-----------
+1) connect to keyvault get secret in linked service 
+2) apply scheduling trigger 
+3) if copyactiviity send mail notification

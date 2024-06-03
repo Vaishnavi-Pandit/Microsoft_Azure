@@ -1,0 +1,214 @@
+Srinivas
+
+13 years
+
+Azure Data Engineer
+
+
+----------------------
+
+Agenda:
+------
+
+1. What is Data?
+
+2. What is Datababase?
+
+3. What is ETL?
+
+4. What is Cloud Computing?
+
+5. What are the Azure Data Engineering services
+
+-----------------------
+
+
+What is Data? 
+
+collection of raw facts
+
+eg : nuber, characteesr, audio, video, images
+
+What is Database?
+
+collection of logicall related data stored in a single place
+
+
+what is DBMS?
+
+Database management system -->  insert , updateg, delete --> 
+
+DBMS --> softare
+
+DBMS, RDBMS --> 
+
+oracle,
+sqlserver
+teradata
+db2
+......
+
+
+What is ETL?
+
+Extract
+
+Transform 
+
+Load 
+
+------------------
+
+Cloud Computing
+---------------
+
+
+
+online retail --> flipkart --> 4 months ---> 
+
+
+  
+     1. webservers
+	 2. infrastructure
+	 3. virtual machines
+	 4. networking
+	 5. databases
+	               customers 1 year --> 10TB --> 
+				             2 years ---> 20TB
+							 
+							 3 years --> 5TB
+	 6. security 
+	 7. liceneces
+	 
+	 
+	 cloud providers ---> provide all services 
+	 
+	 
+Data engineering: 
+
+    i) Data ingestion  ---> tables 
+	
+	ii) Data processing  ==-> extracting required information
+	
+	
+   1basket ---> 10 fruits ---> 9 apples , 1 mango --> 
+   1basket ---> 1M fruits ---> 99999 apple, 1 mango --> 
+   
+   
+ Azure Data engineering Services
+ --------------------------------
+ 
+ 
+ 1. Azure storage accounts  ---> ADLS   -------> BigData
+                            AzureDataLakestorage
+							
+  
+ 2. Azure DataFactory  ---> ETL cloud 
+                       --> ingestion ----> connectors 
+					                           (oracle)
+			            ---> Dataprocessing 
+						---> scheduling
+						==> pipelines
+ 
+ 3. Azure Databricks ----> spark engine --> pyspark 
+                          --> notebooks
+						  
+						  
+ 4. Azure sqlserver  ----> database environment
+                        ----> tables 
+
+ 5. Azure synapse analytics --->                  
+
+ 6. Azure keyvault   ----> store the secret information 
+                        
+ 7. Azure Devops --> Repos
+                     
+					 code repository --> 
+					  (GIT)
+					  
+
+------------------------ 
+	
+	
+What is BigData?
+
+i) volume --------> huge amount of data 
+               ---> gmail --> 25MB ---> 
+			        
+					Huge amount of data 
+					
+ii) velocity  ----> high speed generating data --> continuosly generating data 
+                 eg : CC'cam 
+iii) variety  ----> 
+                    i) Structured Data  ----> 
+					                           tables, delimited files 
+				   ii) semi structured data  --> xmls, json files 
+				   iii) un structured data  ---> audio, vidoe, images 
+				   
+				   
+				   
+
+
+filpkart ---> 6 months data ---> srinivas --> baby products --> predict --> 1 year --> 
+               2 yeara data --->  =-------> mobile --->  campaigns --> 
+			   
+			
+icici ---> 1 year customer data --> credit card ---> 3L --> 6L ---> 
+
+           4 years customers data --- -------->  ----> 3L --> 4L 
+
+
+
+
+What are the challenges of BigData?
+
+i) How to store the data 
+ii) How to process the data 
+
+BigData challenges ---> Hadoop --> HDFS -->   ADLS 
+                                   spark -->  Databricks 
+								   
+			
+database --> 
+
+why traditional databases doesn't handle bigdata?
+
+i) Storage 
+
+         scaling: 
+                  1. verical scaling 
+				  2. Horizonal scaling 
+				  
+	oracle  ---> 128 nodes
+    sqlserver  > 256 nodes 
+    teradata ..... 
+	
+	Hadoop --> unlimited number of nodes --> 
+	
+ii) processing 
+
+         1) Non Distributed Data processing 
+        ii) Distributed Dataprocessing 
+
+		database--> kb's
+		hadoop --> MB's --> 
+		
+		
+	BigData challanges --> stroage  -----> HDFS    ------> ADLS 
+	                       processing  --> MR/Spark -----> Databricks 
+						   
+						   
+
+ADLS ----> Azure DataLake Storage 
+
+
+1)  database  vs datawarehouse  vs Datalake  vs datalakehouse
+2)  How to create azure account 
+3)  How to create azure storage account 
+
+					   
+
+	
+
+	
+	 
